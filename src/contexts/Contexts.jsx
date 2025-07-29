@@ -6,7 +6,7 @@ function StatesProvider({ children }) {
   const [clothingData, setClothingData] = useState([]);
   useEffect(function () {
     async function fetchData() {
-      const res = await fetch(`${URL}/Clothing`);
+      const res = await fetch(`Clothing.json`);
       const data = await res.json();
       setClothingData(data);
     }
