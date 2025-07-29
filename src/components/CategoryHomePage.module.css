@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  margin: 2rem 0;
+  padding: 0 2rem;
+}
+.container > a {
+  width: 300px;
+  height: 240px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 2rem;
+  background: #eceff1;
+  background: linear-gradient(
+    90deg,
+    rgba(236, 239, 241, 1) 0%,
+    rgba(207, 216, 220, 1) 50%,
+    rgba(176, 190, 197, 1) 100%
+  );
+  text-decoration: none;
+  color: inherit;
+}
+.container > a > div > .imgChildish {
+  width: 240px;
+}
+.container > a > div > img {
+  width: 170px;
+  height: 266px;
+  object-fit: cover;
+  position: relative;
+  z-index: 50;
+}
+
+.container > a > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100%;
+  width: 120px;
+}
+.container > a > div > p {
+  width: 100%;
+}
+@media screen and (max-width: 560px) {
+  .container {
+    padding: 0 0;
+  }
+  .container > a {
+    width: 100%;
+    gap: 0px;
+  }
+  .container > a > div > .imgChildish {
+    width: 225px;
+    transform: translateX(30px);
+  }
+}

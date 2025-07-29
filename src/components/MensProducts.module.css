@@ -1,0 +1,146 @@
+.container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  padding: 1rem;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+}
+.topContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.topContainer > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  width: 170px;
+  text-decoration: none;
+  color: #242424;
+}
+.topContainer > a > svg {
+  width: 17px;
+  color: #242424;
+}
+.topContainer > span {
+  width: 85%;
+  height: 2px;
+  background-color: #ecebeb;
+}
+.topContainer > h2 {
+  font-size: 0.9rem;
+  width: 170px;
+  text-align: right;
+}
+.containerCart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  overflow: hidden;
+  width: 100%;
+}
+.container > .containerCart > a {
+  width: 190px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.2rem;
+
+  border: solid 1px #ecebeb;
+  padding: 1rem 0;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: #242424;
+}
+.boxSvgLike {
+  background-color: #fff;
+  width: 35px;
+  height: 35px;
+  border-radius: 20px;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  line-height: 49px;
+  transform: translateX(-50px);
+  transition: all ease-in 200ms;
+  z-index: 100;
+}
+.boxSvgLike > svg {
+  width: 20px;
+  color: #242424;
+}
+.container > .containerCart > a:hover > .boxSvgLike {
+  transform: translateX(0px);
+}
+.container > .containerCart > a:hover > .boxImg > img {
+  transform: scale(1.1);
+}
+.boxImg {
+  width: 189px;
+  height: 199px;
+  overflow: hidden;
+}
+.container > .containerCart > a > .boxImg > img {
+  width: 189px;
+  height: 199px;
+  object-fit: cover;
+  transition: all ease-in 200ms;
+}
+
+.container > .containerCart > a > h3 {
+  font-size: 0.8rem;
+  height: 30px;
+  line-height: 30px;
+}
+.container > .containerCart > a > span {
+  color: #2eade9;
+  font-size: 0.9rem;
+}
+@media screen and (max-width: 520px) {
+  .topContainer > h2,
+  .topContainer > a {
+    font-size: 0.7rem;
+  }
+  .container > .containerCart > a {
+    width: 160px;
+  }
+  .boxImg {
+    width: 150px;
+    height: 170px;
+  }
+  .container > .containerCart > a > .boxImg > img {
+    width: 150px;
+    height: 170px;
+  }
+  .container > .containerCart > a > h3 {
+    font-size: 0.6rem;
+    height: 22px;
+    line-height: 22px;
+  }
+  .container > .containerCart > a > span {
+    font-size: 0.6rem;
+  }
+}
+@media screen and (max-width: 365px) {
+  .topContainer > h2,
+  .topContainer > a {
+    font-size: 0.5rem;
+  }
+  .topContainer > a > svg {
+    width: 13px;
+  }
+}

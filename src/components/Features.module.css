@@ -1,0 +1,54 @@
+.containerFeatures {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  width: 100%;
+}
+.containerFeatures > div {
+  width: 300px;
+  height: 115px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 0 0.5rem;
+}
+.containerFeatures > div > div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.3rem;
+}
+.containerFeatures > div > div > svg {
+  width: 70px;
+  height: 70px;
+
+  color: #242424;
+}
+@media screen and (max-width: 520px) {
+  .containerFeatures > div {
+    width: 80%;
+    height: 100px;
+    justify-content: center;
+  }
+  .containerFeatures > div > div > svg {
+    width: 40px;
+    height: 40px;
+  }
+  .containerFeatures > div > div > h3 {
+    font-size: 0.9rem;
+  }
+  .containerFeatures > div > div > p {
+    font-size: 0.7rem;
+  }
+}
+@media screen and (max-width: 330px) {
+  .containerFeatures > div {
+    width: 100%;
+  }
+}

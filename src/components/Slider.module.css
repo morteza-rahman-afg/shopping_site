@@ -1,0 +1,136 @@
+.containerSlide {
+  max-width: 1000px;
+  width: 100%;
+  height: 80vh;
+}
+.slide {
+  background-color: #95d1f9;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 8rem;
+  border-radius: 10px;
+  padding: 0 1.5rem;
+}
+.boxImg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+}
+.textSlide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.textSlide > h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  transition: all ease 800ms;
+}
+.textSlide > p {
+  font-size: 1.5rem;
+}
+.textSlide > a {
+  width: 150px;
+  height: 45px;
+  border-radius: 20px;
+  border: none;
+  background-color: #00193e;
+  color: #fff;
+  transition: all ease 800ms;
+  text-decoration: none;
+  text-align: center;
+  line-height: 45px;
+}
+.transform_80px {
+  transform: translateY(80px);
+}
+.transform_65px {
+  transform: translateY(-65px);
+}
+.transform_0 {
+  transform: translateY(0px);
+}
+.textSlide > a:hover {
+  background-color: #fff;
+  color: #242424;
+}
+.boxImg > img {
+  width: 200px;
+  height: 430px;
+  object-fit: cover;
+  z-index: 100;
+}
+.Circle {
+  position: absolute;
+  width: 270px;
+  height: 270px;
+  border-radius: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 10px #fff;
+  bottom: 180px;
+}
+
+@media screen and (max-width: 980px) {
+  .textSlide > h1 {
+    font-size: 2.8rem;
+  }
+  .textSlide > p {
+    font-size: 1rem;
+  }
+  .textSlide > a {
+    width: 130px;
+    height: 38px;
+
+    line-height: 38px;
+    font-size: 0.8rem;
+  }
+  .boxImg > img {
+    width: 170px;
+    height: 350px;
+  }
+  .Circle {
+    width: 230px;
+    height: 230px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .slide {
+    gap: 3rem;
+  }
+  .textSlide > h1 {
+    font-size: 2rem;
+  }
+  .textSlide > p {
+    font-size: 0.7rem;
+  }
+  .textSlide > a {
+    width: 110px;
+    height: 35px;
+
+    line-height: 35px;
+    font-size: 0.6rem;
+  }
+}
+@media screen and (max-width: 520px) {
+  .slide {
+    flex-direction: column;
+  }
+  .boxImg > img {
+    width: 115px;
+    height: 250px;
+  }
+  .Circle {
+    width: 180px;
+    height: 180px;
+    bottom: 110px;
+  }
+}
