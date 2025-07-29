@@ -43,7 +43,7 @@ function Slider() {
           <div className={styles.textSlide}>
             <h1>فروشگاه سارینا</h1>
             <p>{data.text}</p>
-            <Link to={`/filterProducts/${data.type}`}>مشاهده محصولات</Link>
+            <Link to={`filterProducts/${data.type}`}>مشاهده محصولات</Link>
           </div>
           <div className={styles.boxImg}>
             <span className={styles.Circle}></span>
