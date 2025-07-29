@@ -18,15 +18,18 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
-          <Route path="/" element={<Home />} />
-          <Route path="aboutUs" element={<AboutUs />} />
-          <Route path="store" element={<Store />} />
-          <Route path="blog" element={<Blog />} />
-          <Route path="like" element={<Like />} />
-          <Route path="basket" element={<Basket />} />
-          <Route path="login" element={<Login />} />
-          <Route path="filterProducts/:id" element={<FilterProducts />} />
-          <Route path="product/:id" element={<Product />} />
+          <Route path="shopping_site/" element={<Home />} />
+          <Route path="shopping_site/aboutUs" element={<AboutUs />} />
+          <Route path="shopping_site/store" element={<Store />} />
+          <Route path="shopping_site/blog" element={<Blog />} />
+          <Route path="shopping_site/like" element={<Like />} />
+          <Route path="shopping_site/basket" element={<Basket />} />
+          <Route path="shopping_site/login" element={<Login />} />
+          <Route
+            path="shopping_site/filterProducts/:id"
+            element={<FilterProducts />}
+          />
+          <Route path="shopping_site/product/:id" element={<Product />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </BrowserRouter>
