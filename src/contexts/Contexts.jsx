@@ -293,21 +293,9 @@ const Clothing = [
     id: 3952,
   },
 ];
-// const URL = "http://localhost:9000";
 const Contexts = createContext();
 function StatesProvider({ children }) {
   const [clothingData, setClothingData] = useState(Clothing);
-  // useEffect(function () {
-  //   async function fetchData() {
-  //     const res = await fetch(`Clothing.json`);
-  //     const data = await res.json();
-  //     setClothingData(data);
-  //   }
-  //   fetchData();
-  // }, []);
-
-  // ////////////////////////////////////////////////////
-
   const [show, setShow] = useState(false);
   const [showWindow, setShowWindow] = useState(false);
 
