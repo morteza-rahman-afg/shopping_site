@@ -6,9 +6,9 @@ import MensProducts from "../components/MensProducts";
 import Features from "../components/Features";
 import Footer from "../components/Footer";
 import NavMobile from "../components/NavMobile";
-import { useStates } from "../contexts/Contexts";
+// import { useStates } from "../contexts/Contexts";
 function Home() {
-  const { clothingData } = useStates();
+  // const { clothingData } = useStates();
   return (
     <>
       <Nav />
@@ -16,9 +16,9 @@ function Home() {
       <div className={styles.container}>
         <Slider />
         <CategoryHomePage />
-        <MensProducts clothingData={clothingData} type={"Masculine"} />
-        <MensProducts clothingData={clothingData} type={"Feminine"} />
-        <MensProducts clothingData={clothingData} type={"Childish"} />
+        <MensProducts type={"Masculine"} />
+        <MensProducts type={"Feminine"} />
+        <MensProducts type={"Childish"} />
         <Features />
       </div>
       <Footer />
