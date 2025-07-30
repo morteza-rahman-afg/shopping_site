@@ -2,10 +2,9 @@ import { Link } from "react-router-dom";
 import styles from "../components/MensProducts.module.css";
 import Button from "./Button";
 function MensProducts({ clothingData, type }) {
-  const maleProducts = clothingData
-    .filter((product) => product.type === type)
+  const newData = clothingData
+    ?.filter((product) => product.type === type)
     .slice(0, 4);
-  console.log(maleProducts);
   return (
     <div className={styles.container}>
       <div className={styles.topContainer}>
@@ -32,7 +31,7 @@ function MensProducts({ clothingData, type }) {
         </Link>
       </div>
       <div className={styles.containerCart}>
-        {maleProducts.map((cart, i) => (
+        {newData?.map((cart) => (
           <Link key={cart.id} to={`/product/${cart.id}`}>
             <span className={styles.boxSvgLike}>
               <svg

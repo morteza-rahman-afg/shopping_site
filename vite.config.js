@@ -11,5 +11,4 @@ export default defineConfig({
       emitError: false, // ولی خطا نده که development قطع نشه
     }),
   ],
-  base: "/shopping_site",
 });

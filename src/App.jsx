@@ -16,16 +16,15 @@ function App() {
     <StatesProvider>
       <BrowserRouter>
         <Routes>
-          <Route index element={<Home />} />
-          <Route path="shopping_site" element={<Home />} />
-          <Route path="/aboutUs" element={<AboutUs />} />
-          <Route path="/store" element={<Store />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/like" element={<Like />} />
-          <Route path="/basket" element={<Basket />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/filterProducts/:id" element={<FilterProducts />} />
-          <Route path="/product/:id" element={<Product />} />
+          <Route path="/" element={<Home />} />
+          <Route path="aboutUs" element={<AboutUs />} />
+          <Route path="store" element={<Store />} />
+          <Route path="blog" element={<Blog />} />
+          <Route path="like" element={<Like />} />
+          <Route path="basket" element={<Basket />} />
+          <Route path="login" element={<Login />} />
+          <Route path="filterProducts/:id" element={<FilterProducts />} />
+          <Route path="product/:id" element={<Product />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </BrowserRouter>

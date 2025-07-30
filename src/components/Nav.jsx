@@ -16,7 +16,7 @@ function Nav() {
       </svg>
 
       <div className={styles.cotainerImg}>
-        <img className={styles.img} src="logos.png" alt="Logo" />
+        <img className={styles.img} src="../public/logos.png" alt="Logo" />
       </div>
 
       <div className={styles.cotainerLink}>

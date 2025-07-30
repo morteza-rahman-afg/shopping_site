@@ -1,6 +1,5 @@
 {
   "name": "shopping_site",
-  "homepage": "https://morteza-rahman-afg.github.io/shopping_site/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,8 +8,7 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "server": "json-server --watch data/Clothing.json --port 9000"
   },
   "dependencies": {
     "prop-types": "^15.8.1",
