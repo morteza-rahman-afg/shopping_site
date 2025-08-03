@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { useStates } from "../contexts/Contexts";
 import { useEffect } from "react";
 import Spinner from "../components/Spinner";
+import NavMobile from "../components/NavMobile";
 function Product() {
   const { id } = useParams();
   const { fetchId, isLoding, newCart } = useStates();
@@ -21,8 +22,9 @@ function Product() {
       ) : (
         <>
           <Nav />
+          <NavMobile />
           <h1>{newCart.name}</h1>
-          <p>{newCart.type}</p>{" "}
+          <p>{newCart.type}</p>
         </>
       )}
     </div>

@@ -1,10 +1,12 @@
 import Nav from "../components/Nav";
+import NavMobile from "../components/NavMobile";
 function Login() {
   return (
-    <div>
+    <>
       <Nav />
-      Login
-    </div>
+      <NavMobile />
+      <div>Login</div>
+    </>
   );
 }
 

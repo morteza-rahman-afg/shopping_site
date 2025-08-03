@@ -1,0 +1,87 @@
+.containerTextLink {
+  width: 100%;
+  height: 150px;
+  background-color: #e7e7e7;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.containerTextLink > div {
+  display: flex;
+  gap: 2rem;
+}
+.containerTextLink > div > button {
+  border: none;
+  background-color: inherit;
+}
+.containerCart {
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 1.5rem;
+}
+.cart {
+  position: relative;
+  overflow: hidden;
+  width: 250px;
+  height: 370px;
+  border: solid 2px #eeeeee;
+  text-decoration: none;
+  color: #242424;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1rem;
+}
+.cart > .boxImg > img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: all ease-in 200ms;
+}
+
+.boxSvgLike {
+  background-color: #fff;
+  width: 35px;
+  height: 35px;
+  border-radius: 20px;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  line-height: 49px;
+  transform: translateX(-50px);
+  transition: all ease-in 200ms;
+  z-index: 100;
+}
+.boxSvgLike > svg {
+  width: 20px;
+  color: #242424;
+}
+.cart:hover > .boxSvgLike {
+  transform: translateX(0px);
+}
+.cart:hover > .boxImg > img {
+  transform: scale(1.1);
+}
+.cart > h3 {
+  font-size: 0.8rem;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+}
+.cart > span {
+  color: #2eade9;
+  font-size: 0.9rem;
+  display: block;
+}

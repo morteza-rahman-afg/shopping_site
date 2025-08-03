@@ -1,13 +1,15 @@
 import { NavLink } from "react-router-dom";
 import styles from "../components/Nav.module.css";
 import { useStates } from "../contexts/Contexts";
-function Nav() {
-  const { setShowWindow } = useStates();
+function Nav({ objStyle }) {
+  const { dispatch, navRef } = useStates();
   return (
-    <div className={styles.nav}>
+    <div ref={navRef} style={objStyle} className={styles.nav}>
       <svg
         className={styles.showWindow}
-        onClick={() => setShowWindow(true)}
+        onClick={() => {
+          dispatch({ type: "show" });
+        }}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="currentColor"
@@ -24,7 +26,7 @@ function Nav() {
 
         <NavLink to={"/aboutUs"}>درباره ما</NavLink>
 
-        <NavLink to={"/store"}>فروشگاه</NavLink>
+        <NavLink to={`/store`}>فروشگاه</NavLink>
 
         <NavLink to={"/blog"}>بلاگ</NavLink>
       </div>

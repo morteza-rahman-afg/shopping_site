@@ -9,6 +9,7 @@
   background-color: #fff;
   border-radius: 20px;
   margin-bottom: 1.5rem;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
 }
 .topContainer {
   width: 100%;
@@ -64,75 +65,11 @@
   text-decoration: none;
   color: #242424;
 }
-.boxSvgLike {
-  background-color: #fff;
-  width: 35px;
-  height: 35px;
-  border-radius: 20px;
-  position: absolute;
-  left: 8px;
-  top: 8px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  line-height: 49px;
-  transform: translateX(-50px);
-  transition: all ease-in 200ms;
-  z-index: 100;
-}
-.boxSvgLike > svg {
-  width: 20px;
-  color: #242424;
-}
-.container > .containerCart > a:hover > .boxSvgLike {
-  transform: translateX(0px);
-}
-.container > .containerCart > a:hover > .boxImg > img {
-  transform: scale(1.1);
-}
-.boxImg {
-  width: 189px;
-  height: 199px;
-  overflow: hidden;
-}
-.container > .containerCart > a > .boxImg > img {
-  width: 189px;
-  height: 199px;
-  object-fit: cover;
-  transition: all ease-in 200ms;
-}
 
-.container > .containerCart > a > h3 {
-  font-size: 0.8rem;
-  height: 30px;
-  line-height: 30px;
-}
-.container > .containerCart > a > span {
-  color: #2eade9;
-  font-size: 0.9rem;
-}
 @media screen and (max-width: 520px) {
   .topContainer > h2,
   .topContainer > a {
     font-size: 0.7rem;
-  }
-  .container > .containerCart > a {
-    width: 160px;
-  }
-  .boxImg {
-    width: 150px;
-    height: 170px;
-  }
-  .container > .containerCart > a > .boxImg > img {
-    width: 150px;
-    height: 170px;
-  }
-  .container > .containerCart > a > h3 {
-    font-size: 0.6rem;
-    height: 22px;
-    line-height: 22px;
-  }
-  .container > .containerCart > a > span {
-    font-size: 0.6rem;
   }
 }
 @media screen and (max-width: 365px) {

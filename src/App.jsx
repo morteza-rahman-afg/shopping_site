@@ -6,29 +6,33 @@ import Blog from "./pages/Blog";
 import Like from "./pages/Like";
 import Basket from "./pages/Basket";
 import Login from "./pages/Login";
-import FilterProducts from "./pages/FilterProducts";
 import Error from "./pages/Error";
 import Product from "./pages/Product";
+import ScrollToTop from "./ScrollToTop/ScrollToTop";
 import { StatesProvider } from "./contexts/Contexts";
+import BtnScrol from "./components/BtnScrol";
 
 function App() {
   return (
-    <StatesProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="aboutUs" element={<AboutUs />} />
-          <Route path="store" element={<Store />} />
-          <Route path="blog" element={<Blog />} />
-          <Route path="like" element={<Like />} />
-          <Route path="basket" element={<Basket />} />
-          <Route path="login" element={<Login />} />
-          <Route path="filterProducts/:id" element={<FilterProducts />} />
-          <Route path="product/:id" element={<Product />} />
-          <Route path="*" element={<Error />} />
-        </Routes>
-      </BrowserRouter>
-    </StatesProvider>
+    <>
+      <StatesProvider>
+        <BrowserRouter>
+          <ScrollToTop />
+          <BtnScrol />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="aboutUs" element={<AboutUs />} />
+            <Route path="store" element={<Store />} />
+            <Route path="blog" element={<Blog />} />
+            <Route path="like" element={<Like />} />
+            <Route path="basket" element={<Basket />} />
+            <Route path="login" element={<Login />} />
+            <Route path="product/:id" element={<Product />} />
+            <Route path="*" element={<Error />} />
+          </Routes>
+        </BrowserRouter>
+      </StatesProvider>
+    </>
   );
 }
 

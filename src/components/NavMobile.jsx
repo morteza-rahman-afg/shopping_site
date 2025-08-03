@@ -4,17 +4,19 @@ import { useStates } from "../contexts/Contexts";
 import { useEffect } from "react";
 
 function NavMobile() {
-  const { show, setShow, showWindow, setShowWindow } = useStates();
+  const { statusWindowMobile, showWindow, dispatch } = useStates();
 
   const location = useLocation();
 
   useEffect(() => {
-    setShowWindow(false);
+    dispatch({ type: "close" });
   }, [location.pathname]);
   return (
     <>
       <div
-        onClick={() => setShowWindow(false)}
+        onClick={() => {
+          dispatch({ type: "close" });
+        }}
         className={`${showWindow ? styles.overlay : styles.none}`}
       ></div>
       <div
@@ -23,7 +25,9 @@ function NavMobile() {
         }`}
       >
         <svg
-          onClick={() => setShowWindow(false)}
+          onClick={() => {
+            dispatch({ type: "close" });
+          }}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
@@ -32,23 +36,27 @@ function NavMobile() {
         </svg>
         <div className={styles.boxBtn}>
           <button
-            onClick={() => setShow(true)}
+            onClick={() => {
+              dispatch({ type: "List" });
+            }}
             className={`${styles.btn} ${
-              show ? styles.active : styles.Inactive
+              statusWindowMobile ? styles.active : styles.Inactive
             }`}
           >
             فهرست
           </button>
           <button
-            onClick={() => setShow(false)}
+            onClick={() => {
+              dispatch({ type: "Category" });
+            }}
             className={`${styles.btn} ${
-              !show ? styles.active : styles.Inactive
+              !statusWindowMobile ? styles.active : styles.Inactive
             }`}
           >
             دسته بندی
           </button>
         </div>
-        {show ? (
+        {statusWindowMobile ? (
           <div className={styles.List}>
             <Link to={"/"}>صفحه اصلی</Link>
 
@@ -60,9 +68,9 @@ function NavMobile() {
           </div>
         ) : (
           <div className={styles.Category}>
-            <Link to={`/filterProducts/Masculine`}>مردانه</Link>
-            <Link to={`/filterProducts/Feminine`}>زنانه</Link>
-            <Link to={`/filterProducts/Childish`}>کودکانه</Link>
+            <Link to={`/store`}>مردانه</Link>
+            <Link to={`/store`}>زنانه</Link>
+            <Link to={`/store`}>کودکانه</Link>
           </div>
         )}
       </div>

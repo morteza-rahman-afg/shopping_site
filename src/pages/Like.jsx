@@ -1,10 +1,12 @@
 import Nav from "../components/Nav";
+import NavMobile from "../components/NavMobile";
 function Like() {
   return (
-    <div>
+    <>
       <Nav />
-      Like
-    </div>
+      <NavMobile />
+      <div>Like</div>
+    </>
   );
 }
 

@@ -24,7 +24,7 @@ function CategoryHomePage() {
   return (
     <div className={styles.container}>
       {dataCategoryHomePage.map((data, i) => (
-        <Link to={`/filterProducts/${data.type}`} key={i}>
+        <Link to={`/store?type=${data.type}`} key={i}>
           <div>
             <h2>{data.Category}</h2>
 

@@ -1,10 +1,12 @@
 import Nav from "../components/Nav";
+import NavMobile from "../components/NavMobile";
 function Blog() {
   return (
-    <div>
+    <>
       <Nav />
-      Blog
-    </div>
+      <NavMobile />
+      <div>Blog</div>
+    </>
   );
 }
 
