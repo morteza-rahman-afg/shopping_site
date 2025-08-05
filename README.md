@@ -1,8 +1,29 @@
-# React + Vite
+# 🛍️ Sarina Shop Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Sarina Shop** is an e-commerce website currently under development, built using **React**. The goal of this project is to create a modern, fast, and user-friendly shopping experience focused on clothing products.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚧 Project Status
+
+🔧 This project is **under active development**. Some features might be incomplete or temporarily disabled.
+
+---
+
+## ⚙️ Technologies Used
+
+- ⚛️ [React]
+- 🎨 CSS Modules (for styling components)
+- 🌐 [React Router] for routing
+- 💾 LocalStorage (for client-side data persistence)
+
+---
+
+## 📦 Features (in progress)
+
+- Browse product listings
+- Filter by categories (men, women, kids)
+- Add to cart
+- Remove from cart
+- Show cart total
+- Responsive design (mobile & desktop support)
