@@ -1,0 +1,70 @@
+.Article1 {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+.Article1 > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.Article1 > div > img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.Article1 > div > p {
+  font-size: 0.8rem;
+  color: #777777;
+}
+.Article1 > div > ul {
+  list-style: none;
+  font-size: 0.8rem;
+  color: #777777;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+@media screen and (max-width: 870px) {
+  .Article1 {
+    width: 400px;
+  }
+  .Article1 > div > img {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 710px) {
+  .Article1 {
+    width: 350px;
+  }
+  .Article1 > div > h1 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 660px) {
+  .Article1 {
+    width: 90%;
+  }
+  .Article1 > div > h1 {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .Article1 > div > h1 {
+    font-size: 1rem;
+  }
+  .Article1 > div > img {
+    height: 290px;
+  }
+  .Article1 > div > p,
+  .Article1 > div > ul {
+    font-size: 0.7rem;
+  }
+  .Article1 > div > h3 {
+    font-size: 1rem;
+  }
+}

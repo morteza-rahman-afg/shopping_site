@@ -1,0 +1,106 @@
+.form {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.box_inputs_name_family {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3.5rem;
+}
+.box_inputs_name_family > div {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.box_inputs_name_family > div > input {
+  width: 100%;
+  height: 42px;
+  border: 2px solid #eaeaea;
+}
+.box_inputs_name_family > div > label::after {
+  content: "*";
+  color: red;
+}
+.box_new_password {
+  position: relative;
+  width: 100%;
+  border: 2px solid #eaeaea;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 20px;
+  padding: 2rem;
+}
+.box_new_password > div {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.box_new_password > div > input {
+  width: 100%;
+  height: 42px;
+  border: 2px solid #eaeaea;
+}
+.box_new_password::after {
+  content: "تغییر گذرواژه";
+  position: absolute;
+  top: -14px;
+  background-color: #f9f9f9;
+  width: 150px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.form > button {
+  width: 150px;
+  height: 42px;
+  border-radius: 20px;
+  background-color: #2f46ef;
+  border: none;
+  transition: all ease-in 200ms;
+  color: #fff;
+}
+.form > button:hover {
+  background-color: rgb(46, 173, 233);
+}
+@media screen and (max-width: 1000px) {
+  .box_inputs_name_family {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 500px) {
+  .form {
+    gap: 1.5rem;
+  }
+  .box_inputs_name_family > div > label {
+    font-size: 0.8rem;
+  }
+  .box_new_password {
+    padding: 1rem;
+  }
+  .box_new_password > div > label {
+    font-size: 0.7rem;
+  }
+  .box_new_password::after {
+    font-size: 1rem;
+  }
+  .form > button {
+    width: 120px;
+    height: 38px;
+    font-size: 0.8rem;
+  }
+  .box_new_password > div > input,
+  .box_inputs_name_family > div > input {
+    height: 38px;
+  }
+}

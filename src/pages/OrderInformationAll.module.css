@@ -1,0 +1,97 @@
+.containerOrderInformationAll {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  color: #242424;
+}
+
+.containerOrderInformationAll > thead,
+.containerOrderInformationAll > tbody {
+  width: 100%;
+  border-bottom: 2px solid #e7e7e7;
+  padding-right: 1rem;
+}
+.Table_titles {
+  height: 60px;
+  line-height: 60px;
+}
+.Table_information {
+  height: 70px;
+  line-height: 70px;
+  color: #77797b;
+}
+.containerOrderInformationAll > thead > tr,
+.containerOrderInformationAll > tbody > tr {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.containerOrderInformationAll
+  > thead
+  > tr
+  > th
+  .containerOrderInformationAll
+  > tbody
+  > tr
+  > th {
+  width: 100%;
+  text-align: right;
+}
+.Table_information > tr > th {
+  font-size: 0.8rem;
+}
+
+.btn_Taible {
+  display: inline-block;
+  text-decoration: none;
+  width: 70px;
+  height: 35px;
+  border-radius: 20px;
+  transition: all ease-in 200ms;
+  text-align: center;
+  line-height: 35px;
+  background-color: #2f46ef;
+  color: #fff;
+  font-size: 0.8rem;
+}
+.btn_Taible:hover {
+  background-color: #2eadeb;
+}
+.containerOrderInformationAll_max_width800px {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .containerOrderInformationAll {
+    display: none;
+  }
+  .containerOrderInformationAll_max_width800px {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .containerOrderInformationAll_max_width800px > tbody {
+    width: 100%;
+  }
+  .containerOrderInformationAll_max_width800px > tbody > tr {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #e7e7e7;
+  }
+  .containerOrderInformationAll_max_width800px
+    > tbody:last-of-type
+    > tr:last-child {
+    border: none;
+  }
+  .containerOrderInformationAll_max_width800px > span {
+    width: 100%;
+    height: 3px;
+    background-color: #e7e7e7;
+    margin: 1.5rem 0;
+  }
+}

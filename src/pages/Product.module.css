@@ -1,0 +1,218 @@
+.containerProduct {
+  width: 70%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  position: relative;
+  margin: 2rem auto;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.back {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.back > svg {
+  width: 30px;
+  height: 30px;
+}
+.imgProduct > img {
+  width: 350px;
+  height: 400px;
+  object-fit: cover;
+}
+.content > h3 {
+  font-size: 1.2rem;
+}
+.content > span {
+  color: #2eade9;
+  font-size: 0.7re;
+}
+.content > p {
+  width: 80%;
+  color: #777777;
+  font-size: 0.8rem;
+}
+.contentProduct {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+}
+.btns {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.btns > button,
+.productCart > a {
+  height: 42px;
+  width: 150px;
+  border-radius: 20px;
+  font-size: 13px;
+  border: none;
+  transition: all ease-in 200ms;
+  background-color: #2f46ef;
+  color: #fff;
+  line-height: 42px;
+  text-decoration: none;
+  text-align: center;
+}
+.productCart > p {
+  font-size: 0.8rem;
+}
+.btns > button:hover,
+.btns > div > button:hover,
+.productCart > a:hover {
+  background-color: rgb(46, 173, 233);
+}
+
+.btns > div > button {
+  width: 30px;
+  height: 42px;
+  border: 2px solid #e5e5e5;
+  background-color: #fff;
+  transition: all ease-in 200ms;
+}
+.btns > div {
+  display: flex;
+  align-items: center;
+}
+.btns > div > span {
+  width: 28px;
+  height: 42px;
+  text-align: center;
+  line-height: 42px;
+  border: 2px solid #e5e5e5;
+  background-color: #fff;
+}
+
+.productCart {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.productCart > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.productCart > div > span {
+  display: flex;
+  align-items: center;
+  font-size: 0.7rem;
+  color: #777777;
+}
+.productCart > div > span > span {
+  font-size: 0.8rem;
+  color: #2eade9;
+}
+.productCart > div > p {
+  font-size: 0.9rem;
+}
+@media screen and (max-width: 1000px) {
+  .imgProduct > img {
+    width: 250px;
+    height: 300px;
+  }
+
+  .content > h3 {
+    font-size: 1rem;
+  }
+  .content > span {
+    font-size: 0.6rem;
+  }
+
+  .content > p,
+  .productCart > div > p {
+    width: 90%;
+    font-size: 0.7rem;
+  }
+  .btns > button,
+  .productCart > a {
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 0.7rem;
+  }
+  .btns > div > button {
+    width: 28px;
+    height: 35px;
+    line-height: 35px;
+  }
+  .btns > div > span {
+    width: 25px;
+    height: 35px;
+    line-height: 35px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .containerProduct {
+    width: 85%;
+    height: 350px;
+  }
+  .imgProduct > img {
+    width: 140px;
+    height: 250px;
+  }
+
+  .content > h3 {
+    font-size: 0.8rem;
+  }
+  .content > span {
+    font-size: 0.5rem;
+  }
+  .content > p,
+  .productCart > div > p {
+    width: 90%;
+    font-size: 0.6rem;
+  }
+  .btns > button,
+  .productCart > a {
+    width: 90px;
+    height: 33px;
+    line-height: 33px;
+    font-size: 0.5rem;
+  }
+  .btns > div > button {
+    width: 28px;
+    height: 33px;
+    line-height: 33px;
+  }
+  .btns > div > span {
+    width: 25px;
+    height: 33px;
+    line-height: 33px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .containerProduct {
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    gap: 0;
+    padding: 1rem;
+  }
+  .contentProduct {
+    width: 200px;
+    height: auto;
+    justify-content: center;
+    text-align: center;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .content > p {
+    text-align: center;
+  }
+}

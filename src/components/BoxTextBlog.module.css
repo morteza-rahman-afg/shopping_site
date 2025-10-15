@@ -1,0 +1,68 @@
+.cantainerText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  width: 400px;
+  border-radius: 20px;
+  background-color: #fff;
+  color: #242424;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  bottom: -90px;
+}
+.cantainerText > h2 {
+  font-size: 1rem;
+  text-align: center;
+}
+.cantainerText > p {
+  font-size: 0.8rem;
+  text-align: center;
+}
+.cantainerText > button {
+  color: #2eade9;
+  background-color: #fff;
+  border: none;
+}
+@media screen and (max-width: 900px) {
+  .cantainerText {
+    width: 300px;
+    padding: 0.8rem;
+  }
+  .cantainerText > h2 {
+    font-size: 0.8rem;
+  }
+  .cantainerText > p {
+    font-size: 0.7rem;
+  }
+}
+@media screen and (max-width: 770px) {
+  .cantainerText {
+    width: 250px;
+    padding: 0.7rem;
+    bottom: -70px;
+  }
+  .cantainerText {
+    width: 220px;
+    padding: 0.5rem;
+    bottom: -50px;
+  }
+  .cantainerText > h2 {
+    font-size: 0.7rem;
+  }
+  .cantainerText > p {
+    font-size: 0.6rem;
+  }
+  .cantainerText > button {
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .cantainerText {
+    width: 80%;
+    height: 100px;
+  }
+}

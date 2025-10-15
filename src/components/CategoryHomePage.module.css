@@ -1,16 +1,15 @@
 .container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   gap: 1rem;
   width: 100%;
-  margin: 2rem 0;
-  padding: 0 2rem;
+  margin: 1rem 0;
 }
 .container > a {
-  width: 290px;
-  height: 240px;
+  width: 100%;
+  height: 270px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   display: flex;
@@ -49,6 +48,26 @@
 }
 .container > a > div > p {
   width: 100%;
+}
+@media screen and (max-width: 1170px) {
+  .container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .container > a {
+    width: 420px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .container > a {
+    width: 350px;
+    height: 250px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .container > a {
+    width: 80%;
+  }
 }
 @media screen and (max-width: 560px) {
   .container {

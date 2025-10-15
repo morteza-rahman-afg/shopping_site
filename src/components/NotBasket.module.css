@@ -1,0 +1,41 @@
+.containerNotBasket {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.containerNotBasket > div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.containerNotBasket > div > span {
+  position: absolute;
+  color: #ededed;
+  font-weight: bold;
+  font-size: 5rem;
+  transform: rotate(45deg);
+  top: -27px;
+}
+.containerNotBasket > div > svg {
+  width: 100px;
+  height: 100px;
+  color: #ededed;
+}
+
+.containerNotBasket > a {
+  background-color: #2f46ef;
+  text-decoration: none;
+  color: #fff;
+  width: 150px;
+  height: 38px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 20px;
+  transition: all ease-in 200ms;
+  font-size: 0.8rem;
+}
+.containerNotBasket > a:hover {
+  background-color: rgb(46, 173, 233);
+}

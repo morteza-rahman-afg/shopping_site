@@ -1,0 +1,6 @@
+.containerSvg > svg {
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  border-radius: 50%;
+}

@@ -1,0 +1,33 @@
+.containerItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 90px;
+  text-decoration: none;
+}
+.boxImg > img {
+  width: 90px;
+  height: 90px;
+
+  object-fit: cover;
+}
+.containerItem > div > h6 {
+  font-size: 0.7rem;
+}
+.price {
+  font-size: 0.6rem;
+  color: rgb(46, 173, 233);
+}
+.quantity {
+  font-size: 0.6rem;
+  color: #bbbbbb;
+}
+.containerItem > div > svg {
+  width: 15px;
+  height: 15px;
+}
+.boxText {
+  width: 100%;
+  text-align: right;
+}

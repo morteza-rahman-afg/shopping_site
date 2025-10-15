@@ -1,9 +1,8 @@
 .containerTextLink {
   width: 100%;
-  height: 150px;
+  height: 200px;
   background-color: #e7e7e7;
   text-align: center;
-  font-size: 1.5rem;
   font-weight: 900;
   display: flex;
   align-items: center;
@@ -20,7 +19,7 @@
 }
 .containerCart {
   width: 100%;
-  background-color: #ffffff;
+
   display: flex;
   align-items: center;
   justify-content: center;

@@ -1,0 +1,166 @@
+.containerLogin {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem 0;
+  margin: 0 auto;
+}
+.form,
+.description {
+  width: 40%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.titleForm {
+  font-size: 22px;
+}
+.boxInputLable {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.boxInputLable > input {
+  width: 90%;
+  height: 42px;
+  background-color: #fff;
+  border: 2px solid #e1e1e1;
+  padding-right: 0.8rem;
+}
+.boxInputLable > label {
+  display: flex;
+  align-items: center;
+}
+.boxInputLable > label::after {
+  content: "*";
+  color: red;
+  display: block;
+}
+.boxIconsInput {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.boxIconsInput > input {
+  width: 90%;
+  height: 42px;
+  background-color: #fff;
+  border: 2px solid #e1e1e1;
+  padding-right: 0.8rem;
+}
+.boxIconsInput > svg {
+  position: absolute;
+  left: 65px;
+  width: 20px;
+  height: 20px;
+  color: #666666;
+}
+.lableNumber {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  color: #777777;
+}
+.lableNumber > svg {
+  width: 15px;
+  height: 15px;
+}
+.form > button {
+  width: 90%;
+  height: 42px;
+  background-color: #2f46ef;
+  color: #fff;
+  text-align: center;
+  line-height: 42px;
+  border-radius: 20px;
+  transition: all ease-in 200ms;
+  font-size: 1rem;
+  border: none;
+  margin-top: 0.8rem;
+}
+.form > button:hover {
+  background-color: rgb(46, 173, 233);
+}
+.DownForm {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.8rem;
+}
+.DownForm > a {
+  text-decoration: none;
+  color: #75c9ef;
+  transition: all ease-in 150ms;
+}
+.DownForm > a:hover {
+  text-decoration: underline;
+}
+.DownForm > div {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.description > svg {
+  width: 130px;
+  height: 130px;
+  color: #e7e7e7;
+}
+@media screen and (max-width: 900px) {
+  .form {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .content {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .form,
+  .description {
+    width: 90%;
+  }
+  .boxInputLable > input,
+  .boxInputLable > div > input,
+  .form > button {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+  .boxIconsInput > svg {
+    left: 15px;
+  }
+  .titleForm {
+    font-size: 16px;
+  }
+  .boxInputLable > label,
+  .boxInputLable > p {
+    font-size: 0.8rem;
+  }
+  .description > h2,
+  .description > p {
+    font-size: 0.7rem;
+  }
+  .description > svg {
+    width: 70px;
+    height: 70px;
+  }
+}

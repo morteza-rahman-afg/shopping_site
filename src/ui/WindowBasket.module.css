@@ -1,0 +1,115 @@
+.cantainerWindowBasket {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 340px;
+  height: 100vh;
+  z-index: 101;
+  padding: 0 0.5rem;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  transform: translateX(-340px);
+  transition: transform ease-in 200ms;
+}
+.show {
+  transform: translateX(0px);
+}
+.topWindiwBasket {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cantainerProduct {
+  height: 70%;
+  width: 100%;
+  overflow: auto;
+}
+.cantainerProduct::-webkit-scrollbar {
+  width: 5px;
+}
+.cantainerProduct::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+.cantainerProduct::-webkit-scrollbar-thumb {
+  background: #b5c2c9;
+  border-radius: 10px;
+}
+.bottomWindowBasket {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-top: 1px solid #e4e4e4;
+  padding: 15px 0;
+  gap: 0.5rem;
+  height: 20%;
+  width: 100%;
+}
+.topWindiwBasket > button {
+  border: none;
+  background-color: inherit;
+  display: flex;
+  align-items: center;
+}
+.topWindiwBasket > button > svg {
+  width: 24px;
+  height: 24px;
+}
+.bottomWindowBasket > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bottomWindowBasket > button,
+.bottomWindowBasket > a {
+  text-decoration: none;
+  text-align: center;
+  line-height: 42px;
+  width: 100%;
+  height: 42px;
+  border: none;
+  border-radius: 20px;
+  font-size: 13px;
+}
+.btn1 {
+  background-color: #e7e7e7;
+}
+.btn2 {
+  background-color: #2eade9;
+  color: #fff;
+}
+.bottomWindowBasket > div > span {
+  font-size: 1rem;
+  color: #2eade9;
+  display: flex;
+  gap: 0.3rem;
+}
+@media screen and (max-width: 500px) {
+  .cantainerWindowBasket {
+    width: 260px;
+  }
+  .topWindiwBasket > h3,
+  .topWindiwBasket > button,
+  .bottomWindowBasket > div > h6,
+  .bottomWindowBasket > div > span {
+    font-size: 0.8rem;
+  }
+
+  .topWindiwBasket > button > svg {
+    width: 18px;
+    height: 18px;
+  }
+  .bottomWindowBasket > a,
+  .bottomWindowBasket > button {
+    height: 35px;
+    line-height: 35px;
+  }
+}

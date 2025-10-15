@@ -1,0 +1,60 @@
+.containerCounterScreen {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.descriptionLink > a {
+  text-decoration: none;
+  color: rgb(46, 173, 233);
+}
+.containerBox {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 130px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  text-decoration: none;
+  color: #555555;
+  background-color: #f1f1f1;
+  border: none;
+}
+.card > svg {
+  width: 60px;
+  height: 60px;
+  transition: all ease-in 150ms;
+}
+.card:hover svg {
+  color: rgb(46, 173, 233);
+}
+@media screen and (max-width: 880px) {
+  .containerBox {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+@media screen and (max-width: 690px) {
+  .descriptionLink,
+  .descriptionLink > a {
+    font-size: 0.7rem;
+  }
+  .containerCounterScreen > div > p > span {
+    font-size: 0.8rem;
+  }
+  .card > h4 {
+    font-size: 0.7rem;
+  }
+  .card > svg {
+    width: 38px;
+    height: 38px;
+  }
+}

@@ -1,28 +1,29 @@
 .containerSlide {
   width: 100%;
-  height: 80vh;
+  height: 82vh;
+  margin-top: 1rem;
 }
 .slide {
   background-color: #95d1f9;
   height: 100%;
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-end;
   gap: 8rem;
   border-radius: 10px;
   padding: 0 1.5rem;
 }
 .boxImg {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   position: relative;
 }
 .textSlide {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,6 +80,9 @@
 }
 
 @media screen and (max-width: 980px) {
+  .containerSlide {
+    height: 86vh;
+  }
   .textSlide > h1 {
     font-size: 2.8rem;
   }
@@ -131,5 +135,14 @@
     width: 180px;
     height: 180px;
     bottom: 110px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .slide {
+    align-items: flex-end;
+  }
+  .textSlide {
+    height: 100%;
+    align-items: center;
   }
 }

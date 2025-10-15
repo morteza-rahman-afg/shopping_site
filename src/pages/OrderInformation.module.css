@@ -1,0 +1,81 @@
+.containerOrderInformation {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 4rem;
+}
+.containerlists {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2rem;
+}
+.textList > p {
+  color: #777777;
+}
+.textList > p > span {
+  color: #242424;
+  margin: 0 0.1rem;
+}
+.containerlists > h3 {
+  font-size: 1.5rem;
+}
+.list {
+  width: 100%;
+}
+.list > thead,
+.list > tbody {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+}
+.list > thead > tr,
+.list > tbody > tr {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #eaeaea;
+}
+.list > thead > tr > th,
+.list > tbody > tr > th {
+  color: #777777;
+}
+
+.userSpecifications {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10rem;
+}
+.userSpecifications > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.userSpecifications > div > p {
+  color: #777777;
+}
+
+@media screen and (max-width: 400px) {
+  .textList > p,
+  .textList > p > span {
+    font-size: 0.7rem;
+  }
+  .containerlists > h3 {
+    font-size: 1rem;
+  }
+  .list > thead > tr > th,
+  .list > tbody > tr > th,
+  .list > tbody > tr > th > span {
+    font-size: 0.7rem;
+  }
+  .userSpecifications {
+    gap: 1.5rem;
+  }
+}

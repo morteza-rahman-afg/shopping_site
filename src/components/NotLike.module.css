@@ -1,0 +1,62 @@
+.containerLike {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.containerNotLike {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 2rem;
+}
+.containerNotLike > svg {
+  width: 100px;
+  height: 100px;
+  color: #e7e7e7;
+}
+.containerNotLike > p {
+  text-align: center;
+}
+.containerNotLike > a {
+  background-color: #2f46ef;
+  text-decoration: none;
+  color: #fff;
+  width: 150px;
+  height: 38px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 20px;
+  transition: all ease-in 200ms;
+  font-size: 0.8rem;
+}
+.containerNotLike > a:hover {
+  background-color: rgb(46, 173, 233);
+}
+@media screen and (max-width: 650px) {
+  .containerNotLike {
+    width: 70%;
+    gap: 0.5rem;
+  }
+  .containerNotLike > svg {
+    width: 80px;
+    height: 80px;
+  }
+  .containerNotLike > p {
+    font-size: 0.7rem;
+  }
+  .containerNotLike > a {
+    width: 100px;
+    height: 30px;
+    font-size: 0.5rem;
+    line-height: 30px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .containerNotLike {
+    width: 90%;
+  }
+}

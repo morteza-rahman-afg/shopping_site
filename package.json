@@ -8,7 +8,9 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "server": "json-server --watch data/Clothing.json --port 9000 --delay 500"
+    "server": "json-server --watch data/Clothing.json --port 9000 --delay 500",
+    "serverBlog": "json-server --watch data/Blog.json --port 9090",
+    "serverComments": "json-server --watch data/CommentsUser.json --port 9050"
   },
   "dependencies": {
     "prop-types": "^15.8.1",

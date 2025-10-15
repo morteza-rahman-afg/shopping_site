@@ -1,0 +1,58 @@
+.containerQuickAccess {
+  width: 250px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.boxLink {
+  border-bottom: solid 2px #f2f2f2;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+.boxLink > a {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: #242424;
+}
+.Category {
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.8rem;
+  border-bottom: solid 2px #f2f2f2;
+}
+.Category > img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.Category > h3 {
+  font-size: 0.6rem;
+}
+@media screen and (max-width: 770px) {
+  .containerQuickAccess {
+    width: 200px;
+  }
+  .Category > h3 {
+    font-size: 0.5rem;
+  }
+  .Category > img {
+    width: 65px;
+    height: 65px;
+  }
+}
+@media screen and (max-width: 660px) {
+  .containerQuickAccess {
+    display: none;
+  }
+}

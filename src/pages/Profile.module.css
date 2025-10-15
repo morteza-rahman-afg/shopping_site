@@ -1,0 +1,87 @@
+.containerProfile {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.containerProfile > div {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.boxRoute {
+  width: 100%;
+}
+.boxLinkPage {
+  border-left: solid 2px #eaeaea;
+  width: 270px;
+  height: 430px;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  flex-direction: column;
+  padding-left: 2rem;
+}
+.boxLinkPage > h3 {
+  width: 100%;
+  border-bottom: solid 2px #eaeaea;
+  height: 42px;
+  line-height: 42px;
+}
+.link {
+  width: 100%;
+  height: 42px;
+  line-height: 42px;
+  border-radius: 20px;
+  padding-right: 1rem;
+  text-decoration: none;
+  transition: all ease-in 150ms;
+  border: none;
+  background-color: inherit;
+  text-align: right;
+}
+.link:hover {
+  background-color: #eaeaea;
+}
+.active {
+  background-color: #eaeaea;
+}
+@media screen and (max-width: 1250px) {
+  .containerProfile > div {
+    padding: 0 1rem;
+  }
+}
+@media screen and (max-width: 690px) {
+  .containerProfile > div {
+    padding: 0 0.5rem;
+  }
+  .boxLinkPage {
+    width: 200px;
+    padding-left: 0;
+  }
+  .boxLinkPage > h3 {
+    font-size: 0.9rem;
+  }
+  .link {
+    font-size: 0.7rem;
+    width: 95%;
+  }
+}
+@media screen and (max-width: 530px) {
+  .containerProfile {
+    gap: 0.5rem;
+  }
+  .containerProfile > div {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+  .boxLinkPage {
+    border: none;
+    width: 100%;
+  }
+}

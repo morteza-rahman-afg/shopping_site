@@ -29,6 +29,7 @@
 }
 .topContainer > a > svg {
   width: 17px;
+  height: 17px;
   color: #242424;
 }
 .topContainer > span {

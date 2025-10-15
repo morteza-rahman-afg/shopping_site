@@ -1,0 +1,18 @@
+.BtnScrol {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 50%;
+  position: fixed;
+  line-height: 68px;
+  text-align: center;
+  bottom: 10px;
+  left: 10px;
+  z-index: 98;
+}
+.BtnScrol > svg {
+  width: 25px;
+  height: 25px;
+}

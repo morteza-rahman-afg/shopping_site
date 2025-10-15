@@ -31,10 +31,10 @@ function Slider() {
       navigation={true}
       spaceBetween={20}
       slidesPerView={1}
-      autoplay={{
-        delay: 4000,
-        disableOnInteraction: false,
-      }}
+      // autoplay={{
+      //   delay: 4000,
+      //   disableOnInteraction: false,
+      // }}
       pagination={{ clickable: true }}
       loop={true}
     >
