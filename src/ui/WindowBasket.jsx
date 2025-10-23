@@ -11,7 +11,10 @@ function WindowBasket() {
   const { dispatch, statusWindiwBasket } = useWindow();
   const { dataCart } = useCart();
   const location = useLocation();
-  const x = dataCart.reduce((sum, item) => sum + Number(item.Price), 0);
+  const x = dataCart.reduce(
+    (sum, item) => sum + Number(item.Price) * item.Quantity,
+    0
+  );
   const q = dataCart.reduce((sum, item) => sum + item.Quantity, 0);
 
   useEffect(() => {
@@ -61,7 +64,7 @@ function WindowBasket() {
               <div>
                 <h6>مجموع:</h6>
                 <span>
-                  <span>{q * x}</span>
+                  <span>{x}</span>
                   تومان
                 </span>
               </div>

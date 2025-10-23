@@ -6,6 +6,7 @@ function Checkout() {
   const { dataCart, orderData } = useCart();
   const x = dataCart.reduce((sum, item) => sum + Number(item.Price), 0);
   const q = dataCart.reduce((sum, item) => sum + item.Quantity, 0);
+  console.log(orderData);
   return (
     <div className={styles.containerCheckOut}>
       <Svg />
@@ -78,11 +79,8 @@ function Checkout() {
             <h6>جمع جزء</h6>
           </div>
           {dataCart.map((item) => (
-            <div className={styles.SpecificationsUserProduct}>
+            <div className={styles.SpecificationsUserProduct} key={item.id}>
               <div>
-                <svg>
-                  <use href="#close"></use>
-                </svg>
                 <img src={item.img} alt={`img ${item.name}`} />
                 <h6>{item.name}</h6>
               </div>

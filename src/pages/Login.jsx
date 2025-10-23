@@ -4,29 +4,22 @@ import Svg from "../ui/Svg";
 import { useState } from "react";
 import { useAuth } from "../contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
-import ErrorMessage from "../ui/ErrorMessage";
+import toast from "react-hot-toast";
 
 function Register() {
   const { dispatch } = useAuth();
 
-  /// show window ErrorMessage
-  const [show, setShoe] = useState(false);
-
   /// navigate page
   const navigate = useNavigate();
-  /// error
-  const [error, setError] = useState("");
-  /// message
-  const [statemessage, setSatateMassage] = useState("");
+
   /// state show password
   const [showPassword, setShowPassword] = useState(false);
 
   /// captcha
   const [captch, setCaptch] = useState("");
   const [captchaNums, setCaptchaNums] = useState([
-    // Math.floor(Math.random() * 10),
-    // Math.floor(Math.random() * 10),
-    2, 2,
+    Math.floor(Math.random() * 10),
+    Math.floor(Math.random() * 10),
   ]);
 
   function handleSubmit(e) {
@@ -46,47 +39,29 @@ function Register() {
 
     if (captch == captchaNums[0] * captchaNums[1]) {
       dispatch({ type: "user", payload: data });
-      setSatateMassage("ثبت نام شما با موفقیت انجام شد");
-      setShoe(true);
       navigate("/profile/Counter");
-      setError("");
+      toast.success("ثبت نام با موفقیت انجام شد");
     } else {
-      setError("کپچا نادرست میباشد");
-      setShoe(true);
-      setSatateMassage("");
+      toast.error("کپچا نادرست میباشد.");
     }
-    setTimeout(() => setShoe(false), 1500);
   }
 
   return (
     <div className={styles.containerLogin}>
       <Svg />
       <TitlePage>ایجاد حساب</TitlePage>
-      <ErrorMessage message={statemessage} error={error} stateShow={show} />
       <div className={styles.content}>
         <form className={styles.form} onSubmit={handleSubmit}>
           <h3 className={styles.titleForm}>ثبت نام</h3>
 
           <div className={styles.boxInputLable}>
             <label htmlFor="firstname">نام:</label>
-            <input
-              type="text"
-              required
-              name="firstname"
-              id="firstname"
-              value={"morteza"}
-            />
+            <input type="text" required name="firstname" id="firstname" />
           </div>
 
           <div className={styles.boxInputLable}>
             <label htmlFor="lastname">نام خانوادگی:</label>
-            <input
-              type="text"
-              required
-              name="lastname"
-              id="lastname"
-              value={"rahmani"}
-            />
+            <input type="text" required name="lastname" id="lastname" />
           </div>
 
           <div className={styles.boxInputLable}>
@@ -98,19 +73,12 @@ function Register() {
               title="فقط حروف انگلیسی و اعداد مجاز است"
               name="username"
               id="username"
-              value={"m_r_afg"}
             />
           </div>
 
           <div className={styles.boxInputLable}>
             <label htmlFor="email">ایمیل:</label>
-            <input
-              type="email"
-              required
-              name="email"
-              id="email"
-              value={"mortezarahman.2005afg@gmail.com"}
-            />
+            <input type="email" required name="email" id="email" />
           </div>
 
           <div className={styles.boxInputLable}>
@@ -121,7 +89,6 @@ function Register() {
                 required
                 name="password"
                 id="password"
-                value={"123456"}
               />
               {showPassword ? (
                 <svg onClick={() => setShowPassword(false)}>

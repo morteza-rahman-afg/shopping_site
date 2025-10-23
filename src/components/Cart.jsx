@@ -4,44 +4,31 @@ import { Link } from "react-router-dom";
 import Svg from "../ui/Svg";
 import { useLike } from "../contexts/LikeContext";
 import { useAuth } from "../contexts/AuthContext";
+import toast from "react-hot-toast";
 function Cart({ cart }) {
   const { user } = useAuth();
-  // console.log(user);
   const { dispatch, statusSvgLike, dataLike } = useLike();
   const isLike = dataLike.some((item) => item.id === cart.id);
   function handleLike(e) {
     e.preventDefault();
-
-    if (isLike) {
-      dispatch({ type: "deleteProductLike", payload: cart.id });
+    if (user) {
+      if (isLike) {
+        dispatch({ type: "deleteProductLike", payload: cart.id });
+      } else {
+        dispatch({
+          type: "addLike",
+          payload: { id: cart.id, data: cart },
+        });
+      }
     } else {
-      dispatch({
-        type: "addLike",
-        payload: { id: cart.id, data: cart },
-      });
+      toast.error("برای افزودن محصول به علاقه مندی ها حساب کاربری ایجاد کنید.");
     }
   }
   return (
     <Link className={styles.linkCart} key={cart.id} to={`/product/${cart.id}`}>
       <Svg />
-      <button
-        title={
-          !user || user.length === 0
-            ? "برای افزودن به علاقه مندی ها ایجاد حساب کنید."
-            : "افزودن به علاقه مندی ها"
-        }
-        disabled={!user || user.length === 0}
-        onClick={handleLike}
-        className={styles.boxSvgLike}
-      >
-        <svg
-          title={
-            !user || user.length === 0
-              ? "برای افزودن به علاقه مندی ها ایجاد حساب کنید."
-              : "افزودن به علاقه مندی ها"
-          }
-          style={isLike ? { color: "red" } : { color: "#242424" }}
-        >
+      <button onClick={handleLike} className={styles.boxSvgLike}>
+        <svg style={isLike ? { color: "red" } : { color: "#242424" }}>
           {isLike ? <use href="#heart_solid"></use> : <use href="#heart"></use>}
         </svg>
       </button>

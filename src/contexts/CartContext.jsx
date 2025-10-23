@@ -1,16 +1,12 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
+import toast from "react-hot-toast";
 
 const cartContext = createContext();
 
 const initialState = {
   dataCart: JSON.parse(localStorage.getItem("dataCart")) || [],
-  // orderData: {
-  //   Province: "",
-  //   City: "",
-  //   ZipCode: "",
-  //   Postage: 0,
-  // },
-  orderData: null,
+  orderData: JSON.parse(localStorage.getItem("orderData")) || [],
+  duplicateOrder: null,
 };
 function cartReducer(state, action) {
   switch (action.type) {
@@ -33,12 +29,19 @@ function cartReducer(state, action) {
         dataCart: state.dataCart.filter((p) => p.id !== action.payload),
       };
     case "newDataOrder":
+      const key = `${action.payload.Province}-${action.payload.City}-${action.payload.ZipCode}`;
+      if (state.orderData[key]) return { ...state, duplicateOrder: "error" };
+
       return {
         ...state,
+        duplicateOrder: "addOrder",
         orderData: {
-          ...action.payload,
+          ...state.orderData,
+          [key]: action.payload,
         },
       };
+    case "RESET_DUPLICATE_ORDER":
+      return { ...state, duplicateOrder: null };
     case "logoutUser":
       return { ...state, dataCart: [], orderData: [] };
     default:
@@ -46,7 +49,7 @@ function cartReducer(state, action) {
   }
 }
 function CartProvider({ children }) {
-  const [{ dataCart, orderData }, dispatch] = useReducer(
+  const [{ dataCart, orderData, duplicateOrder }, dispatch] = useReducer(
     cartReducer,
     initialState
   );
@@ -57,13 +60,20 @@ function CartProvider({ children }) {
     },
     [dataCart]
   );
+  useEffect(
+    function () {
+      localStorage.setItem("orderData", JSON.stringify(orderData));
+    },
+    [orderData]
+  );
 
   function logoutUser() {
     dispatch({ type: "logoutUser" });
   }
-  console.log(dataCart, orderData);
   return (
-    <cartContext.Provider value={{ dataCart, orderData, dispatch, logoutUser }}>
+    <cartContext.Provider
+      value={{ dataCart, orderData, dispatch, logoutUser, duplicateOrder }}
+    >
       {children}
     </cartContext.Provider>
   );

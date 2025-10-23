@@ -10,12 +10,14 @@
     "preview": "vite preview",
     "server": "json-server --watch data/Clothing.json --port 9000 --delay 500",
     "serverBlog": "json-server --watch data/Blog.json --port 9090",
-    "serverComments": "json-server --watch data/CommentsUser.json --port 9050"
+    "serverComments": "json-server --watch data/CommentsUser.json --port 9050",
+    "dev-all": "concurrently \"npm run serverComments\" \"npm run serverBlog\" \"npm run server\" \"npm run dev\""
   },
   "dependencies": {
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.6.0",
     "react-router-dom": "^7.7.0",
     "swiper": "^11.2.10"
   },
@@ -23,6 +25,7 @@
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^4.0.3",
+    "concurrently": "^9.2.1",
     "eslint": "^8.45.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",

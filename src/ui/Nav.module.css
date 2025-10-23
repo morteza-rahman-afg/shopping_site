@@ -147,12 +147,27 @@
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 670px) {
+  .nav {
+    padding: 0 0.3rem;
+  }
   .cotainerLink {
     display: none;
   }
   .showWindow {
     display: block;
+  }
+  .dropdownProfile > a {
+    padding: 0;
+    width: 130px;
+    height: 40px;
+  }
+  .dropdownProfile > a > span {
+    font-size: 0.7rem;
+  }
+  .dropdownProfile > a > svg {
+    width: 18px;
+    height: 18px;
   }
 }
 
@@ -163,5 +178,24 @@
   }
   .showWindow {
     width: 25px;
+  }
+  .dropdownProfile > a {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+  }
+  .dropdownProfile > a > svg {
+    width: 16px;
+    height: 16px;
+  }
+  .name {
+    display: none;
+  }
+  .boxLinkDropdown {
+    width: 200px;
+  }
+  .boxLinkDropdown > button,
+  .boxLinkDropdown > a {
+    font-size: 0.7rem;
   }
 }

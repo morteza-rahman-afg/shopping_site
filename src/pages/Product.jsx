@@ -40,7 +40,7 @@ function Product() {
                 </span>
                 <p>محصول به سبد خرید اضافه شده است</p>
               </div>
-              <Link to={"/basket"}>مشاهده سبد خرید</Link>
+              <Link to={"/basket/ShoppingCartPage"}>مشاهده سبد خرید</Link>
             </div>
           ) : (
             <>

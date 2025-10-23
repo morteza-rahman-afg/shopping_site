@@ -36,6 +36,8 @@ import OrderInformation from "./pages/OrderInformation";
 import ShoppingCartPage from "./pages/ShoppingCartPage";
 import Checkout from "./pages/Checkout";
 import CompleteOrder from "./pages/CompleteOrder";
+import { Toaster } from "react-hot-toast";
+import ContainerOrders from "./pages/ContainerOrders";
 const router = createBrowserRouter([
   {
     element: <AppLayote />,
@@ -91,7 +93,16 @@ const router = createBrowserRouter([
         element: <Basket />,
         children: [
           { path: "ShoppingCartPage", element: <ShoppingCartPage /> },
-          { path: "Checkout", element: <Checkout /> },
+          {
+            path: "ContainerOrders",
+            element: <ContainerOrders />,
+            children: [
+              {
+                path: "Checkout/:idOrder",
+                element: <Checkout />,
+              },
+            ],
+          },
           { path: "CompleteOrder", element: <CompleteOrder /> },
         ],
       },
@@ -143,6 +154,21 @@ function App() {
             <RouterProvider
               router={router}
               hydrateFallbackElement={<Spinner />}
+            />
+            <Toaster
+              position="top-center"
+              reverseOrder={false}
+              containerStyle={{ marginTop: "1rem" }}
+              toastOptions={{
+                style: {
+                  width: "500px",
+                },
+                error: {
+                  style: {
+                    width: "800px",
+                  },
+                },
+              }}
             />
           </WindowPrevider>
         </LikeProvider>

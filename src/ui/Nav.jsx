@@ -7,7 +7,7 @@ import { useLike } from "../contexts/LikeContext";
 import { useAuth } from "../contexts/AuthContext";
 import { useEffect } from "react";
 function Nav({ navRef }) {
-  const { dataLike } = useLike();
+  const { dataLike, loguotUserDeleteLike } = useLike();
   const { dataCart, logoutUser } = useCart();
   const { dispatch } = useWindow();
   const { user, logout } = useAuth();
@@ -67,7 +67,7 @@ function Nav({ navRef }) {
                 <use href="#out_user"></use>
               </svg>
 
-              <span>
+              <span className={styles.name}>
                 {user.lastname} {user.firstname}
               </span>
             </Link>
@@ -83,6 +83,7 @@ function Nav({ navRef }) {
                   logout();
                   navigate("/");
                   logoutUser();
+                  loguotUserDeleteLike();
                 }}
               >
                 خروج

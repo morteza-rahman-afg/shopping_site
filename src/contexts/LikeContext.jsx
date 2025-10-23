@@ -31,7 +31,7 @@ function likeReducer(state, action) {
         ...state,
         dataLike: state.dataLike.filter((p) => p.id !== action.payload),
       };
-    case "AllDelete":
+    case "allDelete":
       return { ...state, dataLike: [] };
     default:
       return state;
@@ -49,9 +49,13 @@ function LikeProvider({ children }) {
     },
     [dataLike]
   );
-
+  function loguotUserDeleteLike() {
+    dispatch({ type: "allDelete" });
+  }
   return (
-    <likeContext.Provider value={{ dataLike, dispatch, statusSvgLike }}>
+    <likeContext.Provider
+      value={{ dataLike, dispatch, statusSvgLike, loguotUserDeleteLike }}
+    >
       {children}
     </likeContext.Provider>
   );
