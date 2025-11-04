@@ -1,5 +1,7 @@
 import { Form } from "react-router-dom";
 import styles from "./Account.module.css";
+import { useCart } from "../contexts/CartContext";
+import NotAll from "../ui/NotAll";
 function Account() {
   return (
     <Form className={styles.form}>

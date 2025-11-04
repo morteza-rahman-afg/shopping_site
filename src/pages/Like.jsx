@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import Svg from "../ui/Svg";
 import Button from "../ui/Button";
 import TitlePage from "../ui/TitlePage";
-import NotLike from "../components/NotLike";
 import { useLike } from "../contexts/LikeContext";
 import { useAuth } from "../contexts/AuthContext";
 import { useEffect } from "react";
+import NotAll from "../ui/NotAll";
 function Like() {
   const { dataLike, dispatch } = useLike();
   const { user } = useAuth();
@@ -50,7 +50,28 @@ function Like() {
         </div>
       )}
 
-      {dataLike.length === 0 && <NotLike />}
+      {dataLike.length === 0 && (
+        <>
+          <TitlePage>علاقه مندی ها</TitlePage>
+          {!user || user.length === 0 ? (
+            <NotAll
+              svg="#out_user"
+              title="لیست علاقه مندی ها خالی است."
+              text="برای افزودن محصول به علاقه مندی ها ایجاد حساب کنید."
+              address="/login"
+              textLink="ثبت نام"
+            />
+          ) : (
+            <NotAll
+              svg="#heart"
+              title="لیست علاقه مندی ها خالی است."
+              text="محصولات جالب بسیاری را در صفحه 'فروشگاه' ما پیدا خواهید کرد."
+              address="/store?type=all"
+              textLink="فروشگاه"
+            />
+          )}
+        </>
+      )}
     </>
   );
 }

@@ -1,3 +1,4 @@
+import { object } from "prop-types";
 import { createContext, useContext, useEffect, useReducer } from "react";
 import toast from "react-hot-toast";
 
@@ -42,6 +43,45 @@ function cartReducer(state, action) {
       };
     case "RESET_DUPLICATE_ORDER":
       return { ...state, duplicateOrder: null };
+
+    case "addInformationUser":
+      // مقادیر payload شده
+      const { orderId, InformationUser } = action.payload;
+
+      // اعتبار سنجی key هدف
+      const targetKey = Object.keys(state.orderData).find(
+        (key) => state.orderData[key].OrderCode == orderId
+      );
+
+      // اگر key وجود نداشت return کن
+      if (!targetKey) return state;
+
+      // ذخیره ابجکت هدف با استفاده از key
+      const currentOrder = state.orderData[targetKey];
+
+      // اعتبار سنجی که ایا InformationUser در ابجکت وجود دارد یا نه
+      const hasInformationUser = !!currentOrder.InformationUser;
+
+      // اگر وجود داشت ارور نشون بده
+      if (hasInformationUser) return { ...state, duplicateOrder: "SingleUser" };
+
+      // اگه وجود نداشت ابجکت هد ف را با اطلاعات کاربر اپدیت کن
+      const updateOrder = {
+        ...currentOrder,
+        statusOrder: "در حال بررسی",
+        InformationUser,
+      };
+
+      // حالا یا استفاده از key هدف مقدارش رو مساوی با ابجکت اپدیت شده قرار بده
+      return {
+        ...state,
+        orderData: {
+          ...state.orderData,
+          [targetKey]: updateOrder,
+        },
+      };
+    case "Shopping":
+      return { ...state, duplicateOrder: "Shopping" };
     case "logoutUser":
       return { ...state, dataCart: [], orderData: [] };
     default:

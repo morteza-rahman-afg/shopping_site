@@ -5,11 +5,13 @@ import Overlay from "./Overlay";
 import CartBasket from "../components/CartBasket";
 import { useCart } from "../contexts/CartContext";
 import { useWindow } from "../contexts/WindowsContext";
-import NotBasket from "../components/NotBasket";
+import NotAll from "./NotAll";
+import { useAuth } from "../contexts/AuthContext";
 
 function WindowBasket() {
   const { dispatch, statusWindiwBasket } = useWindow();
   const { dataCart } = useCart();
+  const { user } = useAuth();
   const location = useLocation();
   const x = dataCart.reduce(
     (sum, item) => sum + Number(item.Price) * item.Quantity,
@@ -34,12 +36,9 @@ function WindowBasket() {
       <Overlay typeShow={"closeBasket"} show={statusWindiwBasket} />
       <div
         style={
-          (dataCart.length === 0
-            ? { justifyContent: "flex-start" }
-            : { justifyContent: "space-between" },
           statusWindiwBasket
             ? { transform: "translateX(0px)" }
-            : { transform: "translateX(-340px)" })
+            : { transform: "translateX(-340px)" }
         }
         className={styles.cantainerWindowBasket}
       >
@@ -52,31 +51,34 @@ function WindowBasket() {
             </svg>
           </button>
         </div>
-        {dataCart.length > 0 ? (
-          <>
-            <div className={styles.cantainerProduct}>
-              {dataCart.map((cart) => (
-                <CartBasket item={cart} key={cart.id} />
-              ))}
-            </div>
 
-            <div className={styles.bottomWindowBasket}>
-              <div>
-                <h6>مجموع:</h6>
-                <span>
-                  <span>{x}</span>
-                  تومان
-                </span>
-              </div>
-              <Link className={styles.btn1} to={"/basket/ShoppingCartPage"}>
-                مشاهده سبک خرید
-              </Link>
-              <button className={styles.btn2}>تسویه حساب</button>
-            </div>
-          </>
+        {dataCart.length === 0 ? (
+          !user || user.length === 0 ? (
+            <NotAll type={"NotWindowBasketLoginUser"} />
+          ) : (
+            <NotAll type={"NotWindowBasketProduct"} />
+          )
         ) : (
-          <NotBasket />
+          <div className={styles.cantainerProduct}>
+            {dataCart.map((cart) => (
+              <CartBasket item={cart} key={cart.id} />
+            ))}
+          </div>
         )}
+
+        <div className={styles.bottomWindowBasket}>
+          <div>
+            <h6>مجموع:</h6>
+            <span>
+              <span>{x}</span>
+              تومان
+            </span>
+          </div>
+          <Link className={styles.btn1} to={"/basket/ShoppingCartPage"}>
+            مشاهده سبک خرید
+          </Link>
+          <button className={styles.btn2}>تسویه حساب</button>
+        </div>
       </div>
     </>
   );

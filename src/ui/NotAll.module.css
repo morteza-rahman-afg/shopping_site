@@ -1,0 +1,134 @@
+/* style NotWindowBasketProduct */
+
+.NotWindowBasketProduct {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.NotWindowBasketProduct > div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.NotWindowBasketProduct > div > span {
+  position: absolute;
+  font-weight: bold;
+  font-size: 5rem;
+  transform: rotate(45deg);
+  top: -27px;
+}
+.NotWindowBasketProduct > div > svg {
+  width: 100px;
+  height: 100px;
+}
+
+/* style NotWindowBasketLoginUser */
+.NotWindowBasketLoginUser {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 2rem;
+}
+.NotWindowBasketLoginUser > svg {
+  width: 100px;
+  height: 100px;
+  color: #e7e7e7;
+}
+.NotWindowBasketLoginUser > h6 {
+  text-align: center;
+  font-size: 0.7rem;
+}
+
+.containerNotAll {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.containerNotAll > div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.containerNotAll > div > span {
+  position: absolute;
+  font-weight: bold;
+  font-size: 5rem;
+  transform: rotate(45deg);
+  top: -27px;
+}
+.containerNotAll > div > svg {
+  width: 120px;
+  height: 120px;
+}
+.containerNotAll > h6 {
+  font-size: 1rem;
+}
+.containerNotAll > p {
+  width: 70%;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.containerNotAll > a,
+.NotWindowBasketProduct > a,
+.NotWindowBasketLoginUser > a {
+  background-color: #2f46ef;
+  text-decoration: none;
+  color: #fff;
+  width: 150px;
+  height: 38px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 20px;
+  transition: all ease-in 200ms;
+  font-size: 0.8rem;
+}
+.containerNotAll > a:hover,
+.NotWindowBasketLoginUser > a:hover,
+.NotWindowBasketProduct > a:hover {
+  background-color: rgb(46, 173, 233);
+}
+/* _____________________________________ */
+/* _____________________________________ */
+/* _____________________________________ */
+@media screen and (max-width: 500px) {
+  .NotWindowBasketProduct > div > span,
+  .containerNotAll > div > span {
+    font-size: 4rem;
+    top: -23px;
+  }
+
+  .containerNotAll > div > svg,
+  .NotWindowBasketProduct > div > svg,
+  .NotWindowBasketLoginUser > div > svg {
+    width: 80px;
+    height: 80px;
+  }
+
+  .containerNotAll > h6,
+  .NotWindowBasketLoginUser > h6,
+  .NotWindowBasketProduct > h6 {
+    font-size: 0.8rem;
+  }
+
+  .containerNotAll > a,
+  .NotWindowBasketProduct > a,
+  .NotWindowBasketLoginUser > a {
+    width: 120px;
+    height: 35px;
+    font-size: 0.7rem;
+  }
+
+  .containerNotAll > p {
+    font-size: 0.7rem;
+  }
+}

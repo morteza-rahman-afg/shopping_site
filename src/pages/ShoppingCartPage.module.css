@@ -142,6 +142,10 @@
   .theadTable > tr > th {
     font-size: 0.8rem;
   }
+
+  .tableTable > tr > th > span {
+    width: 107px;
+  }
   .tableTable > tr > th,
   .tableTable > tr > th > span {
     font-size: 0.8rem;

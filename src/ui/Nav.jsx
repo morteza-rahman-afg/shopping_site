@@ -12,6 +12,7 @@ function Nav({ navRef }) {
   const { dispatch } = useWindow();
   const { user, logout } = useAuth();
   const navigate = useNavigate();
+
   return (
     <div ref={navRef} className={styles.nav}>
       <Svg />

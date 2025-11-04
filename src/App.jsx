@@ -103,7 +103,7 @@ const router = createBrowserRouter([
               },
             ],
           },
-          { path: "CompleteOrder", element: <CompleteOrder /> },
+          { path: "CompleteOrder/:id", element: <CompleteOrder /> },
         ],
       },
       {
@@ -132,7 +132,7 @@ const router = createBrowserRouter([
             element: <Orders />,
             children: [
               { path: "OrderInformationAll", element: <OrderInformationAll /> },
-              { path: "OrderInformation", element: <OrderInformation /> },
+              { path: "OrderInformation/:ID", element: <OrderInformation /> },
             ],
           },
           {

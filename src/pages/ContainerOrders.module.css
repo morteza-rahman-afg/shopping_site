@@ -4,11 +4,84 @@
   align-items: center;
   flex-direction: column;
 }
-.ContainerOrdersLink > a {
-  text-decoration: none;
+.ContainerOrdersLink > thead,
+.ContainerOrdersLink > tbody {
+  width: 100%;
+}
+.ContainerOrdersLink > thead > tr,
+.ContainerOrdersLink > tbody > tr {
   width: 100%;
   height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 2px solid #e7e7e7;
+}
+.ContainerOrdersLink > thead > tr > th,
+.ContainerOrdersLink > tbody > tr > th {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ContainerOrdersLink > tbody > tr > th > a {
+  display: block;
+  background-color: #2f46ef;
+  text-decoration: none;
+  color: #fff;
+  width: 150px;
+  height: 38px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 20px;
+  transition: all ease-in 200ms;
+  font-size: 0.8rem;
+}
+.ContainerOrdersLink > tbody > tr > th > a:hover {
+  background-color: rgb(46, 173, 233);
+}
+@media screen and (max-width: 1000px) {
+  .ContainerOrdersLink > thead > tr > th,
+  .ContainerOrdersLink > tbody > tr > th {
+    font-size: 0.7rem;
+  }
+  .ContainerOrdersLink > tbody > tr > th > a {
+    font-size: 0.7rem;
+    width: 90px;
+    height: 35px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .ContainerOrdersLink > thead > tr > th,
+  .ContainerOrdersLink > tbody > tr > th {
+    font-size: 0.6rem;
+  }
+  .ContainerOrdersLink > tbody > tr > th > a {
+    font-size: 0.6rem;
+    width: 70px;
+    height: 33px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .ContainerOrdersLink > thead > tr > .status,
+  .ContainerOrdersLink > thead > tr > .Quantity,
+  .ContainerOrdersLink > tbody > tr > .status,
+  .ContainerOrdersLink > tbody > tr > .Quantity {
+    display: none;
+  }
+}
+@media screen and (max-width: 350px) {
+  .ContainerOrders {
+    padding: 0 0.5rem;
+  }
+  .ContainerOrdersLink > thead > tr > th,
+  .ContainerOrdersLink > tbody > tr > th {
+    font-size: 0.5rem;
+  }
+  .ContainerOrdersLink > tbody > tr > th > a {
+    font-size: 0.5rem;
+    width: 60px;
+    height: 30px;
+  }
 }

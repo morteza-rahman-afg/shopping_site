@@ -278,6 +278,37 @@ function Svg() {
       >
         <path d="M9.9997 15.1709L19.1921 5.97852L20.6063 7.39273L9.9997 17.9993L3.63574 11.6354L5.04996 10.2212L9.9997 15.1709Z"></path>
       </symbol>
+
+      {/* shopping_bag4_line */}
+      <symbol
+        id="shopping_bag4_line"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path d="M9 6H15C15 4.34315 13.6569 3 12 3C10.3431 3 9 4.34315 9 6ZM7 6C7 3.23858 9.23858 1 12 1C14.7614 1 17 3.23858 17 6H20C20.5523 6 21 6.44772 21 7V21C21 21.5523 20.5523 22 20 22H4C3.44772 22 3 21.5523 3 21V7C3 6.44772 3.44772 6 4 6H7ZM5 8V20H19V8H5ZM9 10C9 11.6569 10.3431 13 12 13C13.6569 13 15 11.6569 15 10H17C17 12.7614 14.7614 15 12 15C9.23858 15 7 12.7614 7 10H9Z"></path>
+      </symbol>
+
+      {/* map_pin */}
+      <symbol
+        id="map_pin"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth="1.5"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+        />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+        />
+      </symbol>
     </svg>
   );
 }

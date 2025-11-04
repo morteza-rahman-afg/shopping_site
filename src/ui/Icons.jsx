@@ -1,5 +1,5 @@
 import styles from "./Icons.module.css";
-import Svg from "../ui/Svg";
+import Svg from "./Svg";
 function Icons() {
   return (
     <div

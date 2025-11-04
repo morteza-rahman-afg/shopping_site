@@ -12,7 +12,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-
+  justify-content: space-between;
   transform: translateX(-340px);
   transition: transform ease-in 200ms;
 }
